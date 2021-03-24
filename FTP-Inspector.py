@@ -9,7 +9,7 @@ from datetime import datetime
 from colorama import Fore, Style
 from ftplib import FTP
 
-global green, blue, reset
+global green, blue, reset, red
 
 green = Fore.GREEN
 blue = Fore.CYAN 
