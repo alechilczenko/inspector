@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+#github.com/intrackeable
 #Simple wordlist generator USER:PASSWORD format
 from colorama import Fore
 
