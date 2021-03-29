@@ -3,8 +3,6 @@ Inspector is a simple command line tool for performing dictionary attacks in FTP
 
 At the moment this tool, only work with a custom [USER:PASSWORD] wordlist. If you don't have one, dont't worry, you can generate it with WORDLISTGEN script.
 
-Maybe in the future I will add a function to attack multiple servers simultaneously.
-
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 ![Screenshot](https://img.shields.io/badge/License-GPL-red)
 ![Screenshot](https://img.shields.io/badge/Language-Python%203-blue)
@@ -18,6 +16,10 @@ cd FTP-Inspector
 pip install -r requirements.txt
 python3 FTP-Inspector.py -h
 ```
+## Features
+- [x] Select number of threads.
+- [ ] Attack multiple servers simultaneously.
+- [ ] Anonymizing login attempts using TOR network.
 ![Screenshot](/Screenshots/screen2.png)
 ## Example of usage
 
