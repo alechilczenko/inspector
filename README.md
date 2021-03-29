@@ -16,16 +16,15 @@ cd FTP-Inspector
 pip install -r requirements.txt
 python3 FTP-Inspector.py -h
 ```
-## Features
-- [x] Select number of threads.
-- [ ] Attack multiple servers simultaneously.
-- [ ] Anonymizing login attempts using TOR network.
-
 ![Screenshot](/Screenshots/screen2.png)
 ## Example of usage
 
 ```python
 python3 FTP-Inspector.py -F USER_PASS -T 5 -S 192.169.0.177
 ```
+## Features
+- [x] Select number of threads.
+- [ ] Anonymizing login attempts using TOR network.
+- [ ] Attack multiple servers simultaneously.
 ## Attention
 Use this tool only with educational purposes and not for evil.
