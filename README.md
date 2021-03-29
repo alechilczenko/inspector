@@ -20,6 +20,7 @@ python3 FTP-Inspector.py -h
 - [x] Select number of threads.
 - [ ] Attack multiple servers simultaneously.
 - [ ] Anonymizing login attempts using TOR network.
+
 ![Screenshot](/Screenshots/screen2.png)
 ## Example of usage
 
