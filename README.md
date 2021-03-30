@@ -1,5 +1,5 @@
 # Inspector
-Inspector is a simple command line tool for performing dictionary attacks in FTP servers. You can select the number of threads to usage for obtain a more efficient attack.
+Inspector is a simple command line tool for performing dictionary attacks in FTP servers.
 
 At the moment this tool, only work with a custom [USER:PASSWORD] wordlist. If you don't have one, dont't worry, you can generate it with WORDLISTGEN script.
 
