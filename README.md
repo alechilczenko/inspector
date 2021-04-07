@@ -27,4 +27,4 @@ python3 FTP-Inspector.py -F USER_PASS -T 5 -S 192.169.0.177
 - [ ] Anonymizing login attempts using TOR network.
 - [ ] Attack multiple servers simultaneously.
 ## Attention
-Use this tool only with educational purposes and not for evil.
+This project was created for educational purposes and should not be used in environments without legal authorization.
