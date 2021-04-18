@@ -3,12 +3,12 @@
 #Simple wordlist generator USER:PASSWORD format
 import pyfiglet
 import os
-from colorama import Fore, Style
+from colorama import Fore
 
 global green, red, blue 
 green = Fore.GREEN
 red = Fore.RED
-blue = Fore.CYAN + Style.BRIGHT
+blue = Fore.CYAN
 
 def open_file(file_list):
     with open (file_list,'r') as file:
