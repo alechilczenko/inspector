@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 #github.com/intrackeable
 #Simple wordlist generator USER:PASSWORD format
-from colorama import Fore
+import pyfiglet
+import os
+from colorama import Fore, Style
 
-global green, red 
+global green, red, blue 
 green = Fore.GREEN
 red = Fore.RED
+blue = Fore.CYAN + Style.BRIGHT
 
 def open_file(file_list):
     with open (file_list,'r') as file:
@@ -21,14 +24,19 @@ def generate_wordlist(user_list,pass_list,wordlist):
 def generate_file(user,password,wordlist):
     with open(wordlist,'a') as file:
         file.write(user + ':' + password + '\n')
-        file.close()
+
+def display_banner():
+    os.system('clear')
+    draw = pyfiglet.figlet_format('WORDLISTGEN',font='bubble')
+    print(blue + draw)
+    print('{}Welcome to WORDLISTGEN, a simply program to make wordlist in USER:PASS format!'.format(green))
 
 def main():
     try:
-        print('{}Welcome to WORDLISTGEN, a simply program to make wordlist in USER:PASS format!'.format(green))
-        users = input('Select a file with users: ')
-        passwords = input('Select a file with passwords: ')
-        wordlist = input('Insert a name for new wordlist: ')
+        display_banner()
+        users = input('USERS FILE: ')
+        passwords = input('PASSWORDS FILE: ')
+        wordlist = input('WORDLIST NAME: ')
         if (users == '' or passwords == '' or wordlist == ''):
             print('{}INVALID DATA, TRY IT AGAIN!'.format(red))
             exit()
@@ -37,7 +45,7 @@ def main():
             pass_list = open_file(passwords)
             generate_wordlist(user_list,pass_list,wordlist)
     except KeyboardInterrupt:
-        print('{}CLOSING PROGRAM'.format(red))
+        print('\n{}CLOSING PROGRAM'.format(red))
 
 if __name__ == '__main__':
     main()
