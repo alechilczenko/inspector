@@ -74,11 +74,10 @@ def main():
     display_banner()
     try:
         user_pass, threads, server = options()
-        if user_pass:
+        if user_pass and server:
             user_pass_list = open_file(user_pass)
             main_list = split_list(threads,user_pass_list)
-            if server:
-                multiple_servers(main_list,server)
+            multiple_servers(main_list,server)
         else:
             print(red + 'Please use -H to see all options')
     except KeyboardInterrupt:
