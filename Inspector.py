@@ -34,9 +34,9 @@ def options():
     parser = argparse.ArgumentParser()
     parser.add_argument('-F',help='File with credentials [USER:PASSWORD] format',type=str,dest='user_pass')
     parser.add_argument('-T',help='Number of threads [DEFAULT 2]',type=int,dest='threads',default=2)
-    parser.add_argument('-S',help='FTP server IP',type=str,dest='server')
+    parser.add_argument('-S',help='FTP server IP [Multiple targets allowed]',dest='multiple',type=str,nargs='*')
     flags = parser.parse_args()
-    return flags.user_pass, flags.threads, flags.server
+    return flags.user_pass, flags.threads, flags.multiple
 
 def open_file(file_list):
     with open (file_list,'r') as file:
@@ -65,20 +65,27 @@ def start_threads(main_list,server):
         print(red + 'CLOSING PROGRAM')
         exit()
 
+def multiple_servers(main_list,server_list):
+    for x in server_list:
+        main_process = threading.Thread(target=start_threads, args=(main_list,x))
+        main_process.start()
+
 def main():
     display_banner()
     try:
         user_pass, threads, server = options()
-        if user_pass and server:
+        if user_pass:
             user_pass_list = open_file(user_pass)
             main_list = split_list(threads,user_pass_list)
-            start_threads(main_list,server)
+            if server:
+                multiple_servers(main_list,server)
         else:
             print(red + 'Please use -H to see all options')
-            exit()
     except KeyboardInterrupt:
         print(red + 'CLOSING PROGRAM')
+    finally:
         exit()
+
 if __name__ == '__main__':
     main()
 
