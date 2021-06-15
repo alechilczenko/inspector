@@ -1,5 +1,6 @@
 # Inspector
 Inspector is a simple command line tool designed to understand how dictionary attacks on the FTP protocol work.
+
 The script has different modes of use, you can test multiple targets at the same time and speed up the process by increasing the number of threads. 
 This project is made for educational purposes and is easy to use on virtual machines.
 
