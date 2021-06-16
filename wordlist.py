@@ -29,7 +29,7 @@ def display_banner():
     os.system('clear')
     draw = pyfiglet.figlet_format('WORDLISTGEN',font='bubble')
     print(blue + draw)
-    print('{}Welcome to WORDLISTGEN, a simply program to make wordlist in USER:PASS format!'.format(green))
+    print('{}Welcome to WORDLISTGEN, a simply script to make wordlist in USER:PASS format!'.format(green))
 
 def main():
     try:
