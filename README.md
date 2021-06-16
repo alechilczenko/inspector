@@ -3,7 +3,7 @@ Inspector is a simple command line tool designed to understand how dictionary at
 
 The script has different modes of use, you can test multiple targets at the same time and speed up the process by increasing the number of threads.
 
-This project is made for educational purposes and is easy to use on virtual machines.
+This project is made for educational purposes and is easy with it make tests on vulnerable virtual machines.
 
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 ![Screenshot](https://img.shields.io/badge/License-GPL-red)
